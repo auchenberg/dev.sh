@@ -3,8 +3,10 @@ require 'sinatra'
 require "sinatra/subdomain"
 require 'erb'
 
+require 'open-uri'
 
-set :public, Proc.new { File.join(root, "static") }
+
+set :public_folder, Proc.new { File.join(root, "static") }
 
 configure :development do
 	Sinatra::Application.reset!
@@ -12,12 +14,23 @@ configure :development do
 end
 
 get '/' do
+
+	domain = request.host.split('.')[0]
+
+	if domain == 'get'
+		return open('https://raw.github.com/auchenberg/dev/master/install.sh') {|f|
+			f.read
+		}
+	end
+
   erb :index
 end
 
-subdomain :get do
+
+
+subdomain do
   get '/' do
-    "GET FILE"
+    "TEST"
   end
 end
 
