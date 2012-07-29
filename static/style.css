@@ -1,39 +1,59 @@
-body { text-align: center; font-family: helvetica,arial, verdana, sans-serif; font-size: 62.5%; }
+body {
+  background: #FDFDFD;
+  font-family: Georgia,serif;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
 
 h2 { font-size: 2.8em; font-weight: normal; margin: 0; padding:0; }
 h3 { font-size: 1.3em; font-weight: normal; }
 
-div.frontpage { width: 500px; text-align: center;  margin: 0 auto; font-size: 1em;  position:absolute; z-index: 1; width: 500px; left: 50%; margin-left: -250px; top: 150px;}
-div.frontpage div.button { background: url(i/button.png); width: 290px; height: 81px; cursor: pointer; margin: 0 auto; margin-top: 30px; }
-div.frontpage div.button.hover { cursor:pointer; }
-div.frontpage object { margin-top: 30px; }
+section {
+  border-top: 1px dashed #BEBEBE;
+  width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+section p {
+ font-size: 18px;
+}
 
 header { position: absolute; right: 30px; top: 15px;  font-size: 14px;}
 header, header a, header:visited { color: #b4b5b3; }
 
-div.loader { margin: 0 auto; display: none; background-color: #fff; position:absolute; z-index: 2; width: 650px; left: 50%; margin-left: -325px; top: 0px; padding-top: 240px; height: 260px; }
 
-div.result { margin: 0 auto; display: none; background-color: #fff; padding: 40px 20px 0 20px; text-align: left; }
-div.result h2.none {display: none; }
 
-div.result div.progress {  background-color: #f2f2f2; -moz-border-radius: 10px; -webkit-border-radius:10px; height: 20px; margin-top: 10px;  overflow: hidden;}
-div.result div.progress div.current { background-color: #9ac04e; width: 30px; height: 100%; -moz-border-radius: 10px; -webkit-border-radius:10px; }
+code {
+  font:16px Monaco,'Courier New','DejaVu Sans Mono','Bitstream Vera Sans Mono',monospace;
+}
 
-div.result div.sort-nav { position: absolute; right: 30px; top: 60px;  font-size: 14px; display: none;}
-div.result div.sort-nav div { float: left; }
-div.result div.sort-nav ul { float: right; margin: 0; padding: 0;}
-div.result div.sort-nav ul li { list-style: none; float: left; text-decoration: underline; padding-left: 15px; cursor: pointer;}
-div.result div.sort-nav ul li.selected { font-weight: bold; cursor: auto; }
+.install {
+  padding-top: 30px;
+  overflow: hidden;
+}
 
-div.result ul.list { overflow:auto; padding:15px;  background-color: #f2f2f2; -moz-border-radius: 10px; -webkit-border-radius:10px; margin-top: 20px; }
-div.result ul.list.hidden { display: none; }
+.install code {
+  background-color: #D2D2CA;
+  float: left;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
 
-div.result ul.list li { list-style: none; height: 85px; width: 350px; float: left; padding:15px; -moz-border-radius: 10px; -webkit-border-radius:10px; position: relative; overflow: hidden; }
-div.result ul.list li.parsed { opacity: 0.2;} 
-div.result ul.list li.found { opacity: 1.0;} 
-div.result ul.list li.found:hover { background-color: #fff; }
+.install .source {
+  color: #999;
+  font-size: 12px;
+  padding: 15px 10px;
+  float: left;
+}
 
-div.result ul.list li img { height: 85px; width: 85px; float: left; padding-right: 5px;  }
-div.result ul.list li h2 { font-size: 18px; margin: 0; white-space:nowrap; overflow: hidden; text-overflow: ellipsis;  }
-div.result ul.list li h3 { font-size: 14px; margin: 0; margin-top: 5px; font-weight: normal;}
-div.result ul.list li a { position: absolute; left: 105px; bottom: 15px; display: block; width: 84px; height: 24px; background-image: url(i/open-in-spotify.png); cursor: pointer; text-indent: -5000px; }
+
