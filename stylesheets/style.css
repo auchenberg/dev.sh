@@ -4,11 +4,9 @@ html {
 }
 body {
   margin: 0;
-  padding: 50px 0 0 0;
   color: #404040;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
-  background: rgba(147, 128, 108, 0.1);
 }
 h1 {
   font-size: 60px;
@@ -28,17 +26,29 @@ a:visited {
   color: #000;
   text-decoration: underline;
 }
-section {
-  max-width: 500px;
-  padding: 0 30px 30px 30px;
-  margin: 0 auto;
+header {
+  padding: 30px 0 0 0;
 }
-header h1 {
-  text-transform: uppercase;
+header section {
+  position: relative;
 }
 header h2 {
   margin: 0;
   font-weight: 400;
+}
+section {
+  max-width: 500px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.content {
+  background: rgba(147, 128, 108, 0.1);
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+.content:after {
+  content: "";
+  display: block;
 }
 .install {
   position: relative;
@@ -66,10 +76,9 @@ header h2 {
   width: 100%;
   cursor: pointer;
 }
-.social {
-  position: fixed;
-  bottom: 20px;
-  right: 0;
-  left: 0;
+footer,
+.content:after {
+  line-height: 60px;
+  height: 50px;
   text-align: center;
 }

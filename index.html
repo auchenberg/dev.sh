@@ -5,28 +5,25 @@ layout: default
 <header>
   <section>  
     <h1>dev</h1>
-    <h2>zero config wildcard *.dev domains.</h2>
+    <h2>zero config wildcard  *.dev domains.</h2>
   </section>
 </header>
 
 <section>
+
+  <p>Tired of adding entries to /etc/hosts? Ever wanted wildcard domains in your /etc/hosts?</p>
+  <p><strong>dev</strong> solves all of that by installing a small dns server, and points all *.dev traffic to your computer.</p>
+
+  <h2>Get started</h2>
   <p>To install simply open a terminal and run this command:</p>
   
   <div class="install">
     <span class="prefix">$</span>
     <input type="text" class="command" value="curl get.dev.sh | sh" />
-    <span class="source">(<a href="http://get.dev.sh">View Source</a>)</span>
+    <span class="source">(<a href="http://get.dev.sh" target="_blank">View Source</a>)</span>
   </div>
-
-  <p>Any .dev domain is now pointing to 127.0.0.1, and you can now forget all about adding entries to /etc/hosts.</p>
   
   <h2>What's going on?</h2>
-  <p>DEV is a small script that installs <a href="http://www.thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a>, a lightweight DNS server, and configures it to point *.dev to 127.0.0.1. </p>
-  <p>Afterwards it registeres dnsmasq as a LaunchDaemon, so it start's when you boot your computer.</p>
-  <p>Lastly it hooks into Resolver in OSX, so all traffic on *.dev is piped to dnsmasq.</p>
+  <p><strong>dev</strong> is a small shell script that installs <a href="http://www.thekelleys.org.uk/dnsmasq/doc.html" target="_blank">dnsmasq</a>, a lightweight DNS server, registeres it as a LaunchDaemon, so it start's when your computer boots, and configures Resolver in OSX to resolve *.dev traffic to dnsmasq. </p>That's it.</p>
 
-  <div class="social">
-      <a href="https://twitter.com/auchenberg" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @auchenberg</a>
-      <a href="https://twitter.com/share" class="twitter-share-button" data-via="auchenberg" data-related="auchenberg">Tweet</a>
-  </div>
 </section>
