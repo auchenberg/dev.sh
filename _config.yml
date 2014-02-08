@@ -1,0 +1,4 @@
+pygments: true
+domain: dev.sh
+source:      .
+destination: ./_site
